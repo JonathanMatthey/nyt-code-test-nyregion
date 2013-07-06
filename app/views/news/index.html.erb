@@ -1,0 +1,33 @@
+<div id="container">
+
+  <header>
+    <img id="mastheadLogo" width="379" height="64" alt="The New York Times" src="http://i1.nyt.com/images/misc/nytlogo379x64.gif">
+    <i class="icon icon-logo">The New York Times</i>
+    <div class="languages">
+      <a class="lang-en" href="/news/en">EN</a>
+      <a class="lang-martian" href="/news/mrtn"></a>
+    </div>
+  </header>
+  <% @articles.each do |article| %>
+  <div class="article clearfix">
+    <h3>
+      <%= article.headline %>
+    </h3>
+    <h6 class="byline">
+      <%= article.by_line %>
+      <span class="last-published"><%= article.last_published.strftime("%I:%M%p %Z")  %></span>
+    </h6>
+    <% unless article.thumb_wide_src.nil?   %>
+      <img class="thumb-wide" src="http://nytimes.com/<%= article.thumb_wide_src %>" height="<%= article.thumb_wide_height %>" width="<%= article.thumb_wide_width %>" />
+    <% end %>
+    <% unless article.thumb_src.nil?   %>
+    <img class="thumb" src="http://nytimes.com/<%= article.thumb_src %>" height="<%= article.thumb_height %>" width="<%= article.thumb_width %>" />
+    <% end %>
+
+    <p class="summary">
+      <%= article.summary %>
+    </p>
+  </div>
+  <% end %>
+
+</div>

@@ -3,7 +3,14 @@ NytCodeTestNyregion::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
+  post '/news', to: 'news#render_403'
+  put '/news', to: 'news#render_403'
+  delete '/news', to: 'news#render_403'
+  patch '/news', to: 'news#render_403'
+
+  get '/news(/:lang)', to: 'news#index'
+  get '/mrtn/news', to: 'news#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -39,7 +46,7 @@ NytCodeTestNyregion::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

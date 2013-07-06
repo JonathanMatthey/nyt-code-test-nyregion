@@ -1,0 +1,21 @@
+<% @articles.each do |article| %>
+<div class="article clearfix">
+  <h3>
+    <%= article.headline %>
+  </h3>
+  <h6 class="byline">
+    <%= article.by_line %>
+    <span class="last-published"><%= article.last_published.strftime("%I:%M%p %Z")  %></span>
+  </h6>
+  <% unless article.thumb_wide_src.nil?   %>
+    <img class="thumb-wide" src="http://nytimes.com/<%= article.thumb_wide_src %>" height="<%= article.thumb_wide_height %>" width="<%= article.thumb_wide_width %>" />
+  <% end %>
+  <% unless article.thumb_src.nil?   %>
+  <img class="thumb" src="http://nytimes.com/<%= article.thumb_src %>" height="<%= article.thumb_height %>" width="<%= article.thumb_width %>" />
+  <% end %>
+
+  <p class="summary">
+    <%= article.summary %>
+  </p>
+</div>
+<% end %>

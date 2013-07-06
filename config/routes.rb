@@ -11,6 +11,7 @@ NytCodeTestNyregion::Application.routes.draw do
 
   get '/news(/:lang)', to: 'news#index'
   get '/mrtn/news', to: 'news#index'
+  get '/news-more', to: 'news#load_more_articles'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

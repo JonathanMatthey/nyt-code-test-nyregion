@@ -16,20 +16,13 @@ rbenv: https://github.com/sstephenson/rbenv
 rails: http://rubyonrails.org/
 
 
----------------------
-
-##Bugs:
-
----------------------
+###Bugs:
 
 - Clicking on Load More when in the mrtn language wont load martian translated stories, it will load english ones.
 - Also switching from en to martian can crash the client request for more stories.
 
----------------------
 
-##The Assignment
-
----------------------
+###The Assignment
 
 At the following url (http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion2.js), you'll find a json file that gives you a list of stories, headlines, summaries and photos about New York. Your task is to use the server-side language and framework of your choice (bonus points for using Rails or Sinatra) to create a web page that does the following:
 

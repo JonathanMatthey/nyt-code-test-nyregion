@@ -18,7 +18,7 @@ rails: http://rubyonrails.org/
 
 ---------------------
 
-Bugs:
+##Bugs:
 
 ---------------------
 
@@ -27,7 +27,7 @@ Bugs:
 
 ---------------------
 
-The Assignment
+##The Assignment
 
 ---------------------
 

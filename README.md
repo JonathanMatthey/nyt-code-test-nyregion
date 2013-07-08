@@ -22,8 +22,8 @@ Bugs:
 
 ---------------------
 
-Clicking on Load More when in the mrtn language wont load martian translated stories, it will load english ones.
-Also switching from en to martian can crash the client request for more stories.
+- Clicking on Load More when in the mrtn language wont load martian translated stories, it will load english ones.
+- Also switching from en to martian can crash the client request for more stories.
 
 ---------------------
 
@@ -38,11 +38,11 @@ At the following url (http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregi
 
 2.  Create the ability to toggle between English and a fake Martian language that follows these rules:
 
-	- every word three characters or less is left alone
+- every word three characters or less is left alone
 
-	- every word more than three characters is replaced with boinga.
+- every word more than three characters is replaced with boinga.
 
-	- Maintain the same capitalization and punctuation in the English and Martian versions.
+- Maintain the same capitalization and punctuation in the English and Martian versions.
 
 3. Make sure the page responds with a status of 403 if it receives anything other than a GET request.
 
